@@ -5,8 +5,7 @@ import numpy as np
 from PIL import Image
 
 
-from pydub import AudioSegment
-from pydub.playback import play
+
 
 # Dictionary mapping class indices to class names
 classes = { 0:'Speed limit (20km/h)',
@@ -59,7 +58,7 @@ classes = { 0:'Speed limit (20km/h)',
 from keras.models import load_model
 
 # Load the model
-loaded_model = load_model('D:/mine_/code files @@/pythonf/traffic_proj/modelh.h5')
+loaded_model = load_model('./modelh.h5')
 
 
 # Load the pre-trained model
@@ -102,7 +101,7 @@ def main():
         st.write("Prediction:", classes[prediction])
         st.write("Prediction number:",prediction)
 
-        im_path=f"D:/mine_/code files @@/pythonf/traffic_proj/{prediction}.mp3"
+        im_path=f"./{prediction}.mp3"
        
 
         audio_path = im_path
